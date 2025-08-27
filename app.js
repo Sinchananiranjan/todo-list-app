@@ -3,6 +3,9 @@ function createTask(taskName) {
     const taskList = document.getElementById('task-list');
     const taskItem = document.createElement('li');
     taskItem.textContent = taskName;
+    taskItem.addEventListener('click', () => {
+        taskItem.style.textDecoration = 'line-through';
+    });
     taskList.appendChild(taskItem);
 }
 function addTask() {
