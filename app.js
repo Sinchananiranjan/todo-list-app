@@ -21,3 +21,10 @@ function addTask() {
         input.value = "";
     }
 }
+// TDLA-7: Edit task function
+function editTask(taskItem) {
+    const newTaskName = prompt("Edit task:", taskItem.textContent);
+    if (newTaskName !== null && newTaskName.trim() !== "") {
+        taskItem.textContent = newTaskName;
+    }
+}
