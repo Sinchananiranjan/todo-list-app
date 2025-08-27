@@ -5,3 +5,13 @@ function createTask(taskName) {
     taskItem.textContent = taskName;
     taskList.appendChild(taskItem);
 }
+function addTask() {
+    const input = document.getElementById('task-input');
+    const taskName = input.value.trim();
+    if (taskName !== "") {
+        createTask(taskName);
+        input.value = "";
+    } else {
+        alert("Please enter a task name");
+    }
+}
