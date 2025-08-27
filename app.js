@@ -4,7 +4,7 @@ function createTask(taskName) {
     const taskItem = document.createElement('li');
     taskItem.textContent = taskName;
 
-    // TDLA-6: mark tasks as complete when clicked
+    // mark task complete when clicked
     taskItem.addEventListener('click', () => {
         taskItem.style.textDecoration = 'line-through';
     });
@@ -12,7 +12,6 @@ function createTask(taskName) {
     taskList.appendChild(taskItem);
 }
 
-// Helper function to read input and create tasks
 function addTask() {
     const input = document.getElementById('task-input');
     const taskName = input.value.trim();
