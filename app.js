@@ -22,9 +22,16 @@ function addTask() {
     }
 }
 // TDLA-7: Edit task function
+// TDLA-7: Edit task function
 function editTask(taskItem) {
     const newTaskName = prompt("Edit task:", taskItem.textContent);
     if (newTaskName !== null && newTaskName.trim() !== "") {
         taskItem.textContent = newTaskName;
     }
 }
+
+// Add double-click listener to task items
+document.querySelectorAll('#task-list li').forEach(taskItem => {
+    taskItem.addEventListener('dblclick', () => editTask(taskItem));
+});
+
