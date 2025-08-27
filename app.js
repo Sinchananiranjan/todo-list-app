@@ -4,7 +4,6 @@ function createTask(taskName) {
     const taskItem = document.createElement('li');
     taskItem.textContent = taskName;
 
-    // mark task complete when clicked
     taskItem.addEventListener('click', () => {
         taskItem.style.textDecoration = 'line-through';
     });
